@@ -40,7 +40,9 @@ const tic_tac_toe = {
           this.game_is_over();
       }
       if (winning_sequences_index >= 0) {
-          this.game_is_over();
+          setTimeout(() => {
+            this.start()
+          }, 2000);
           this.stylize_winner_sequence(this.winning_sequences[winning_sequences_index]);
       } else {
           this.symbols.change();
